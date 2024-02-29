@@ -1,4 +1,4 @@
-# Cloud Pipeline Video - Projet Cloud
+# Pipeline Video - Projet Cloud
 
 Une vidéo démonstration est disponible au lien suivant :
 
