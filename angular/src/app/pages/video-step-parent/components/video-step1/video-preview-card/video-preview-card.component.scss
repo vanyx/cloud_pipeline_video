@@ -1,0 +1,44 @@
+.app-video-preview-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  width: 400px;
+  height: 250px;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: white;
+  border-color: #f1f3f1;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.app-video-preview-card:hover {
+  border-color: #c0abf1;
+}
+
+.video-preview-card-title {
+  margin-left: 15px;
+
+  p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.video-preview-card-minia {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+.video-preview-card-minia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  z-index: 1;
+}
+

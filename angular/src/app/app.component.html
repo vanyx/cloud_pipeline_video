@@ -1,0 +1,7 @@
+<div class="app-component">
+  <app-menu class="child-menu"
+  (menuEmitter)="handleMenuPage($event)"></app-menu>
+  <app-video-step-parent *ngIf="page == 1" class="child-video"></app-video-step-parent>
+  <app-about-us *ngIf="page == 2" class="child-video"></app-about-us>
+
+</div>

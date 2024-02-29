@@ -1,0 +1,51 @@
+.app-video-step1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.video-step1-header {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.step1-header-title {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.video-step1-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.step1-card {
+  padding: 20px 100px 20px 100px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 15px;  /* Correction ici */
+  border: 1px solid #f1f3f1;  /* Ajout d'une bordure solide */
+  margin-bottom: 30px;
+
+  p {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  &:hover {
+    background-color: #f1f3f1;
+  }
+}

@@ -1,0 +1,6 @@
+langdetect
+typing
+moviepy
+SpeechRecognition
+soundfile
+git+https://github.com/openai/whisper.git

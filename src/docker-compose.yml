@@ -1,0 +1,47 @@
+version: '1'
+
+services:
+  downscale_pod:
+    build: ./downscale_pod
+    volumes:
+      - ./ressources:/app/ressources
+      - ./results:/app/results
+      - ./tmp:/app/tmp
+
+  langident_pod:
+    build: ./langident_pod
+    volumes:
+      - ./ressources:/app/ressources
+      - ./results:/app/results
+      - ./tmp:/app/tmp
+    depends_on:
+      - downscale_pod
+  
+  subtitle_pod:
+    build: ./subtitle_pod
+    volumes:
+      - ./ressources:/app/ressources
+      - ./results:/app/results
+      - ./tmp:/app/tmp
+    depends_on:
+      - langident_pod
+  
+  animal_detect_pod:
+    build: ./animal_detect_pod
+    volumes:
+      - ./ressources:/app/ressources
+      - ./results:/app/results
+      - ./tmp:/app/tmp
+      - ./yolov5:/app/yolov5
+    depends_on:
+      - subtitle_pod
+
+  push_aws:
+    build: ./push_aws
+    volumes:
+      - ./results:/app/results
+      - ./tmp:/app/tmp
+      - ~/.aws:/root/.aws
+      
+    depends_on:
+      - animal_detect_pod

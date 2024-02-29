@@ -1,0 +1,71 @@
+.app-about-us {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+
+  p {
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
+
+.about-us-members {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  gap: 0px;
+}
+
+.about-us-members-title {
+  margin: 0px;
+  padding: 0px;
+  p {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.about-us-member {
+  p {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+
+.about-us-text {
+  width: 700px;
+  p {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.about-us-infra {
+  width: 960px;
+  height: 540px;
+}
+
+.about-us-steps-text {
+  width: 100%;
+  height: 100%;
+
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    white-space: nowrap;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}

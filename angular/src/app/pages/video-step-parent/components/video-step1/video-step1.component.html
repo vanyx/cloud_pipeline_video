@@ -1,0 +1,13 @@
+<div class="app-video-step1">
+  <div class="video-step1-header">
+    <p class="step1-header-title">Séléctionner une vidéo.</p>
+  </div>
+  <div class="video-step1-content">
+    <div *ngFor="let folder of data; let i = index">
+      <div class="step1-card" (click)="handleCardClick(i)">
+        <p>{{ folder.path }}</p>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="app-video-step2">
+  <div class="video-step2-header">
+    <div class="gogoback" (click)="goBack()">
+      <img src="https://capyassetsstorage.s3.eu-north-1.amazonaws.com/arrow_back.svg" alt="Arrow Back"
+        style="width: 20px; height: 20px;">
+      <p>Retour</p>
+    </div>
+    <p class="step2-header-title">{{ data[indexOfSelectedFolder].path }}</p>
+    <div></div>
+  </div>
+  <div class="video-step2-content">
+    <video controls>
+      <source [src]="videoUrl" type="video/mp4">
+      Votre navigateur ne supporte pas la balise vidéo.
+    </video>
+    <div class="step2-analyse">
+      <p class="step2-analyse-title">Analyse.</p>
+      <div class="step2-langue">
+        <p><span>Langue :</span> {{ jsonOfData['langage'] }}</p>
+      </div>
+      <div class="step2-analyse-all-cards">
+        <div *ngFor="let animal of jsonOfData['animaux']" class="step2-analyse-card">
+          <p>{{animal}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
